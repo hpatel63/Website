@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chief Motel – Custer, South Dakota</title>
+<meta name="description" content="Family-run motel in the heart of Custer with a seasonal indoor pool, hot tub and sauna. Minutes from Black Hills National Forest, Crazy Horse and Sylvan Lake." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0c10;
+    --card:#111319cc;
+    --ink:#eaf2ff;
+    --muted:#9fb2d4;
+    --brand:#7cc7ff;
+    --accent:#79ffa6;
+    --glass:rgba(255,255,255,0.06);
+    --border:rgba(255,255,255,0.12);
+    --shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+    --radius:20px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:linear-gradient(180deg,#0a0d14, #0b0c10 40%, #0a0d14);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:var(--brand);text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:40px 20px}
+  /* Hero */
+  .hero{
+    position:relative;min-height:92svh;display:grid;place-items:center;overflow:hidden;
+    background:
+      radial-gradient(1000px 600px at 120% -10%,rgba(124,199,255,.15),transparent 60%),
+      radial-gradient(900px 500px at -10% 10%,rgba(121,255,166,.10),transparent 60%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:-20px;
+    background:url('https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    filter:brightness(.45) saturate(1.1);
+    transform:scale(1.02);
+  }
+  .hero-inner{position:relative;z-index:2;text-align:center;backdrop-filter:saturate(140%) blur(6px)}
+  .badge{display:inline-block;margin-bottom:14px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600;letter-spacing:.3px}
+  h1{font-family:"DM Serif Display",serif;font-size: clamp(38px, 5vw, 66px);margin:6px 0 14px;line-height:1.05}
+  .sub{font-size:clamp(16px,2vw,20px);color:#cfe0ff;max-width:760px;margin:0 auto 22px}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    padding:14px 18px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
+    color:white;font-weight:700;letter-spacing:.2px;box-shadow:var(--shadow);transform:translateZ(0);transition:.2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .btn.primary{background:linear-gradient(180deg,#7cc7ff,#4ab0ff);color:#06141e;border:0}
+  .btn.whatsapp{background:linear-gradient(180deg,#79ffa6,#38e27d);color:#022312;border:0}
+  /* Sections */
+  section{scroll-margin-top:80px}
+  .grid{display:grid;gap:28px}
+  .lg-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lg-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width: 920px){.lg-2,.lg-3{grid-template-columns:1fr}}
+  .card{
+    background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+    overflow:hidden
+  }
+  .card .pad{padding:22px}
+  h2{font-size:clamp(26px,3.6vw,40px);margin:0 0 10px}
+  .muted{color:var(--muted)}
+  .feature{display:flex;gap:14px;align-items:flex-start}
+  .feature i{
+    width:36px;height:36px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid var(--border)
+  }
+  /* Image tiles */
+  .tile img{width:100%;height:260px;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}
+  /* Sticky booking bar */
+  .bar{
+    position:sticky;bottom:18px;z-index:10;display:flex;gap:12px;justify-content:center;
+    margin:30px auto 10px;max-width:980px;padding:12px;border-radius:18px;border:1px solid var(--border);background:rgba(8,12,18,.7);backdrop-filter:blur(8px) saturate(140%);
+  }
+  .bar input, .bar select{
+    background:#0f1218;color:#eaf2ff;border:1px solid var(--border);border-radius:12px;padding:12px 14px;min-width:150px
+  }
+  .kicker{font-weight:700;color:#cfe0ff;text-transform:uppercase;letter-spacing:.16em;font-size:12px}
+  /* Footer */
+  footer{border-top:1px solid var(--border);margin-top:50px;padding:30px 0 60px;color:#b9c8e3}
+  .logo{font-family:"DM Serif Display",serif;font-size:22px;letter-spacing:.5px}
+</style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Chief Motel hero">
+    <div class="hero-inner wrap">
+      <div class="badge">Custer, South Dakota • Family-run hospitality</div>
+      <h1>Chief Motel</h1>
+      <p class="sub">Stay in the heart of Custer with a cozy basecamp and easy access to the Black Hills. Enjoy a seasonal indoor pool, hot tub and sauna — plus fast Wi-Fi and free parking.</p>
+      <div class="cta" role="group" aria-label="Primary actions">
+        <a class="btn primary" href="tel:+16056732318" aria-label="Call Chief Motel">(605) 673-2318</a>
+        <a class="btn" href="#rooms">View Rooms</a>
+        <a class="btn whatsapp" href="https://wa.me/16056732318" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <!-- lightweight scroll hint -->
+      <div class="muted" style="margin-top:18px">Scroll ▾</div>
+    </div>
+  </header>
+
+
+  <!-- STICKY BOOKING BAR (simple demo; connects to phone/Email) -->
+
+
+  <form class="bar" onsubmit="event.preventDefault(); window.location.href='tel:+16056732318'">
+    <input type="date" aria-label="Check-in" required>
+    <input type="date" aria-label="Check-out" required>
+    <select aria-label="Guests">
+      <option>2 Adults</option><option>1 Adult</option><option>Family</option>
+    </select>
+    <button class="btn primary" type="submit">Check Availability</button>
+    <a class="btn" href="mailto:chiefmot@gwtc.net?subject=Booking%20Request%20-%20Chief%20Motel">Email Us</a>
+  </form>
+
+
+  <main>
+    <!-- HIGHLIGHTS -->
+    <section class="wrap" id="highlights" aria-labelledby="hi-title">
+      <h2 id="hi-title">Why stay with us</h2>
+      <div class="grid lg-3">
+        <div class="card"><div class="pad feature"><i>🏊</i><div><strong>Indoor Pool (seasonal)</strong><br><span class="muted">Relax after a day in the Hills.</span></div></div></div>
+        <div class="card"><div class="pad feature"><i>♨️</i><div><strong>Hot Tub & Sauna</strong><br><span class="muted">Unwind and recharge comfortably.</span></div></div></div>
+        <div class="card"><div class="pad feature"><i>📍</i><div><strong>Central Custer Location</strong><br><span class="muted">Minutes to Black Hills National Forest, Crazy Horse & Sylvan Lake.</span></div></div></div>
+      </div>
+    </section>
+
+
+<!-- ROOMS -->
+<section class="wrap" id="rooms" aria-labelledby="rooms-title">
+  <div style="display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap">
+    <div><div class="kicker">Rooms</div><h2 id="rooms-title">Clean, comfortable & convenient</h2></div>
+    <a class="btn" href="tel:+16056732318">Call to Book</a>
+  </div>
+  <div class="grid lg-3" style="margin-top:14px">
+    <div class="card">
+      <div class="tile"><img alt="Standard Queen room" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1200&auto=format&fit=crop"></div>
+      <div class="pad">
+        <h3>Standard Queen</h3>
+        <p class="muted">Perfect for solo travelers or couples. Mini-fridge, microwave & Wi-Fi.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tile"><img alt="Double room" src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200&auto=format&fit=crop"></div>
+      <div class="pad">
+        <h3>Double Room</h3>
+        <p class="muted">Two comfy beds with space for gear. Great for friends and families.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tile"><img alt="Accessible room" src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1200&auto=format&fit=crop"></div>
+      <div class="pad">
+        <h3>Accessible</h3>
+        <p class="muted">Step-free access, wide clearances and easy bathroom layout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="wrap" id="gallery" aria-labelledby="gal-title">
+  <div class="kicker">Gallery</div><h2 id="gal-title">A glimpse of your stay</h2>
+  <div class="grid lg-3" style="margin-top:14px">
+    <div class="card tile"><img alt="Pool area" src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?q=80&w=1200&auto=format&fit=crop"></div>
+    <div class="card tile"><img alt="Lobby seating" src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?q=80&w=1200&auto=format&fit=crop"></div>
+    <div class="card tile"><img alt="Black Hills scenery" src="https://images.unsplash.com/photo-1508261303786-0e1a5f1b4cda?q=80&w=1200&auto=format&fit=crop"></div>
+  </div>
+</section>
+
+<!-- NEARBY -->
+<section class="wrap" id="nearby" aria-labelledby="near-title">
+  <div class="kicker">Nearby</div><h2 id="near-title">Black Hills at your doorstep</h2>
+  <div class="grid lg-3">
+    <div class="card"><div class="pad"><strong>Black Hills National Forest</strong><br><span class="muted">Hiking, lakes & scenic drives.</span></div></div>
+    <div class="card"><div class="pad"><strong>Crazy Horse Memorial</strong><br><span class="muted">Iconic mountain carving & museum.</span></div></div>
+    <div class="card"><div class="pad"><strong>Sylvan Lake</strong><br><span class="muted">Granite-ringed gem for paddling & photos.</span></div></div>
+  </div>
+</section>
+
+<!-- CONTACT + MAP -->
+<section class="wrap" id="contact" aria-labelledby="co-title">
+  <div class="grid lg-2">
+    <div>
+      <div class="kicker">Contact</div>
+      <h2 id="co-title">We’re here to help</h2>
+      <p><strong>Address:</strong> 120 Mt Rushmore Rd, Custer, SD 57730</p>
+      <p><strong>Phone:</strong> <a href="tel:+16056732318">(605) 673-2318</a></p>
+      <p><strong>Email:</strong> <a href="mailto:chiefmot@gwtc.net">chiefmot@gwtc.net</a></p>
+      <p class="muted">Parking is free. Wi-Fi is complimentary. Pool/sauna availability is seasonal.</p>
+    </div>
+    <div class="card" style="min-height:360px">
+      <iframe title="Map to Chief Motel, Custer SD" width="100%" height="360" style="border:0"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Chief%20Motel%2C%20120%20Mt%20Rushmore%20Rd%2C%20Custer%2C%20SD%2057730&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (static snippet; replace with real widget if desired) -->
+<section class="wrap" id="reviews" aria-labelledby="rv-title">
+  <div class="kicker">Guest Love</div>
+  <h2 id="rv-title">What guests mention</h2>
+  <div class="grid lg-3">
+    <div class="card"><div class="pad">“Helpful staff & perfect location for the Black Hills.”</div></div>
+    <div class="card"><div class="pad">“Clean rooms, strong Wi-Fi, great value.”</div></div>
+    <div class="card"><div class="pad">“Pool & hot tub were a relaxing bonus.”</div></div>
+  </div>
+</section>
+
+  </main>
+
+
+  <footer class="wrap">
+    <div class="logo">Chief Motel</div>
+    <div class="muted">© <span id="y"></span> Chief Motel. All rights reserved. • Custer, South Dakota</div>
+  </footer>
+
+
+  <!-- micro UX -->
+
+
+  <script>
+    // update year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+
+  <!-- SEO: schema.org Hotel -->
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Chief Motel",
+    "description": "Family-run motel in downtown Custer with seasonal indoor pool, hot tub and sauna. Close to Black Hills National Forest, Crazy Horse and Sylvan Lake.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "120 Mt Rushmore Rd",
+      "addressLocality": "Custer",
+      "addressRegion": "SD",
+      "postalCode": "57730",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-605-673-2318",
+    "email": "chiefmot@gwtc.net",
+    "amenityFeature": [
+      {"@type":"LocationFeatureSpecification","name":"Indoor pool","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Hot tub","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Sauna","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Free parking","value":true}
+    ],
+    "url": "https://www.chiefmotel.com/",
+    "geo": {"@type":"GeoCoordinates","latitude":43.764,"longitude":-103.602}
+  }
+  </script>
+
+
+</body>
+</html>
+
+
